@@ -1,7 +1,9 @@
 {if isset($permoverview['b_virtualserver_servergroup_list']) AND empty($permoverview['b_virtualserver_servergroup_list'])}
     {include file="permerror.tpl"}
 {else}
-	<div class="panel-body"><h3 class="text-center">{$lang['servergroups']}</h3></div>
+	<div class="panel-body">
+        <h3 class="text-center">{$lang['servergroups']}</h3>
+    </div>
 	<table class="table table-condensed table-hover table-striped panel-body">
 		<thead>
 			<tr>
@@ -22,7 +24,9 @@
                             <form method="post" action="index.php?site=sgroups&amp;sid={$sid}&amp;sgid={$value['sgid']}">
                                 <div class="input-group">
                                     <input class="form-control" type="text" name="name" value="{$value['name']}" />
-                                    <div class="input-group-btn"><button class="btn btn-success" type="submit" name="sendname" title="{$lang['rename']}">{$lang['rename']}</button></div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" name="sendname" title="{$lang['rename']}">{$lang['rename']}</button>
+                                    </div>
                                 </div>
                             </form>
                         </td>
