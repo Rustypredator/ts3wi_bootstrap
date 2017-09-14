@@ -9,4 +9,4 @@ Link to the Forumpost: [LINK](http://interface.ts-rent.de/smf/index.php?page=Thr
 3. Done!
   
 Folder should look something like this:  
-[]()
+![folderstructure](https://dl.hunters-tavern.de/bilder/ts3wi-bootstrap/Auswahl_008.png)
