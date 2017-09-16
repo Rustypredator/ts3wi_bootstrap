@@ -21,9 +21,13 @@
                 <td>{$value['pid']}</td>
                 <td>{$value['channel_name']}</td>
                 <td>
-                    <div class="btn-group">
-                    <a class="btn btn-info" href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$value['cid']}" title="{$lang['select']}"><i class="fa fa-lg fa-eye"></i></a>
-                    <a class="btn btn-success" href="index.php?site=channeleditperm&amp;sid={$sid}&amp;cid={$value['cid']}" title="{$lang['editperms']}"><i class="fa fa-lg fa-edit"></i></a>
+                    <div class="col-sm-2 col-sm-offset-6">
+                        <a class="btn btn-info" href="index.php?site=channelview&amp;sid={$sid}&amp;cid={$value['cid']}" title="{$lang['select']}"><i class="fa fa-lg fa-eye"></i></a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a class="btn btn-success" href="index.php?site=channeleditperm&amp;sid={$sid}&amp;cid={$value['cid']}" title="{$lang['editperms']}"><i class="fa fa-lg fa-edit"></i></a>
+                    </div>
+                    <div class="col-sm-2">
                         <form method="post" action="index.php?site=channel&amp;sid={$sid}">
                             <input type="hidden" name="cid" value="{$value['cid']}" />
                             {if $value['total_clients'] > 0}

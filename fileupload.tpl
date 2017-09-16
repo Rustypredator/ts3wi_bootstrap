@@ -8,10 +8,14 @@
             <label class="label-control col-sm-2">{$lang['iconupload']}</label>
             <div class="col-sm-10">
                 <input type="hidden" name="max_file_size" value="81920" />
-                <input class="form-control" name="thefile" type="file" />
+                <div class="input-group">
+                    <input class="form-control" name="thefile" type="file" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-success" type="submit" name="upload" title="{$lang['iconupload']}"><i class="fa fa-lg fa-upload"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-success" type="submit" name="upload" title="{$lang['iconupload']}"><i class="fa fa-lg fa-upload"></i></button>
     </form>
 </div>
 <form method="post" action="index.php?site=fileupload&amp;sid={$sid}">
@@ -23,7 +27,7 @@
                 <th>{$lang['id']}</th>
                 <th>Ma&szlig;e</th>
                 <th>Type</th>
-                {$lang['delete']} {$lang['selectall']}<input type="checkbox" name="checkall" value="0" onclick="check(2)" /></th>
+                <th>{$lang['delete']} {$lang['selectall']}<input type="checkbox" name="checkall" value="0" onclick="check(2)" /></th>
             </tr>
         </thead>
         <tbody>

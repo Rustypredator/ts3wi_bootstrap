@@ -1,16 +1,12 @@
-{if $newserverversion !== true AND !empty($serverinfo['virtualserver_version'])}
-	<div class="alert alert-info alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<i class="fa fa-lg fa-info-circle"></i>&nbsp;{$lang['serverupdateav']}{$newserverversion}
-	</div>
-{/if}
-
 {if isset($permoverview['b_virtualserver_info_view']) AND empty($permoverview['b_virtualserver_info_view'])}
-	<div class="alert alert-info alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<i class="fa fa-lg fa-info-circle"></i>&nbsp;<strong>{$lang['error']}</strong><br/>{$lang['nopermissions']}
-	</div>
+	{include file="permerror.tpl"}
 {else}
+    {if $newserverversion !== true AND !empty($serverinfo['virtualserver_version'])}
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <i class="fa fa-lg fa-info-circle"></i>&nbsp;{$lang['serverupdateav']}{$newserverversion}
+        </div>
+    {/if}
     <div class="panel-body">
         <form method="post" action="index.php?site=serverview&amp;sid={$sid}">
             <input type="hidden" name="sid" value="{$serverinfo['virtualserver_id']}" />

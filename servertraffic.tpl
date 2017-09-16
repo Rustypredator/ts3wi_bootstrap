@@ -43,9 +43,9 @@
             <tr>
                 <td colspan="3">
                     {if !isset($smarty.get.refresh) OR $smarty.get.refresh == on}
-                        <a class="btn btn-warning" href="index.php?site=servertraffic&amp;refresh=off">{$lang['stoprefresh']}</a>
+                        <a class="btn btn-warning btn-block" href="index.php?site=servertraffic&amp;refresh=off">{$lang['stoprefresh']}</a>
                     {else}
-                        <a class="btn btn-success" href="index.php?site=servertraffic&amp;refresh=on">{$lang['autorefresh']}</a>
+                        <a class="btn btn-success btn-block" href="index.php?site=servertraffic&amp;refresh=on">{$lang['autorefresh']}</a>
                     {/if}
                 </td>
             </tr>
@@ -99,9 +99,9 @@
             <tr>
                 <td colspan="3">
                     {if !isset($smarty.get.refresh) OR $smarty.get.refresh == on}
-                        <a class="btn btn-warning" href="index.php?site=servertraffic&amp;sid={$sid}&amp;refresh=off">{$lang['stoprefresh']}</a>
+                        <a class="btn btn-warning btn-block" href="index.php?site=servertraffic&amp;sid={$sid}&amp;refresh=off">{$lang['stoprefresh']}</a>
                     {else}
-                        <a class="btn btn-success" href="index.php?site=servertraffic&amp;sid={$sid}&amp;refresh=on">{$lang['autorefresh']}</a>
+                        <a class="btn btn-success btn-block" href="index.php?site=servertraffic&amp;sid={$sid}&amp;refresh=on">{$lang['autorefresh']}</a>
                     {/if}
                 </td>
             </tr>

@@ -11,8 +11,12 @@
             </div>
             <div class="form-group">
                 <label class="label-control col-sm-2">{$lang['newpassword']}</label>
-                <div class="col-sm-8"><input class="form-control" type="text" name="newsettings[virtualserver_password]"/></div>
-                <div class="col-sm-2"><button class="btn btn-success" type="submit" name="editpw" title="{$lang['set']}">{$lang['set']}</button></div>
+                <div class="col-sm-8">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="newsettings[virtualserver_password]"/>
+                    <div class="input-group-btn"><button class="btn btn-success" type="submit" name="editpw" title="{$lang['set']}">{$lang['set']}</button></div>
+                </div>
+                </div>
             </div>
         </form>
     {/if}
@@ -140,20 +144,18 @@
         </div>
         <div class="form-group">
             <label class="label-control col-sm-2">{$lang['iconid']}</label>
-            <div class="col-sm-8">
-                {if isset($permoverview['b_virtualserver_modify_icon_id']) AND empty($permoverview['b_virtualserver_modify_icon_id'])}
-                    -
-                {else}
-                    <input class="form-control" id="iconid" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
-                {/if}
-            </div>
-            <div class="col-sm-2">
-                {if isset($permoverview['b_virtualserver_modify_icon_id']) AND empty($permoverview['b_virtualserver_modify_icon_id'])}
-                    -
-                {else}
-                    <a class="btn btn-success" href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}&amp;port={$serverinfo['virtualserver_port']}');">{$lang['select']}</a>
-                {/if}
-            </div>
+            {if isset($permoverview['b_virtualserver_modify_icon_id']) AND empty($permoverview['b_virtualserver_modify_icon_id'])}
+                -
+            {else}
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input class="form-control" id="iconid" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
+                        <div class="input-group-btn">
+                            <a class="btn btn-success" href="javascript:oeffnefenster('site/showallicons.php?ip={$smarty.session.server_ip}&amp;sid={$sid}&amp;port={$serverinfo['virtualserver_port']}');">{$lang['select']}</a>
+                        </div>
+                    </div>
+                </div>
+            {/if}
         </div>
         <h3 class="text-center">{$lang['standardgroups']}</h3>
         <div class="form-group">
@@ -311,7 +313,10 @@
                 {if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />{$lang['seconds']}
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />
+                        <div class="input-group-btn">{$lang['seconds']}</div>
+                    </div>
                 {/if}
             </div>
         </div>
@@ -321,7 +326,10 @@
                 {if isset($permoverview['b_virtualserver_modify_complain']) AND empty($permoverview['b_virtualserver_modify_complain'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />{$lang['seconds']}
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />
+                        <div class="input-group-btn">{$lang['seconds']}</div>
+                    </div>
                 {/if}
             </div>
         </div>
@@ -363,7 +371,10 @@
                 {if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />Byte/s
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />
+                        <div class="input-group-btn">Byte/s</div>
+                    </div>
                 {/if}
             </div>
         </div>
@@ -373,7 +384,10 @@
                 {if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />MiB
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />
+                        <div class="input-group-btn">MiB</div>
+                    </div>
                 {/if}
             </div>
         </div>
@@ -383,7 +397,10 @@
                 {if isset($permoverview['b_virtualserver_modify_ft_settings']) AND empty($permoverview['b_virtualserver_modify_ft_settings'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />Byte/s
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />
+                        <div class="input-group-btn">Byte/s</div>
+                    </div>
                 {/if}
             </div>
         </div>
@@ -393,7 +410,8 @@
                 {if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />MiB
+                    <input class="form-control" type="text" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />
+                    <div class="input-group-btn">MiB</div>
                 {/if}
             </div>
         </div>

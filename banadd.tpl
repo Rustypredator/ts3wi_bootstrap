@@ -30,12 +30,14 @@
             </div>
             <div class="form-group">
                 <label class="col-sm-2 label-control" for="bantime">{$lang['bantime']}</label>
-                <div class="col-sm-8">
-                    <input class="form-control" type="text" name="bantime" value="" />
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="bantime" value="" />
+                        <div class="input-group-addon">{$lang['seconds']}</div>
+                    </div>
                 </div>
-                <div class="col-sm-2">{$lang['seconds']}</div>
             </div>
-            <button class="btn btn-warning" type="submit" name="addban">
+            <button class="btn btn-warning btn-block" type="submit" name="addban">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-user fa-stack-1x"></i>
                     <i class="fa fa-ban fa-stack-2x text-danger"></i>

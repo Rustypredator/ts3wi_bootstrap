@@ -1,6 +1,7 @@
 {if $hoststatus === false AND $serverhost === true}
-    <div class="alert alert-danger">
-        {$lang['nohoster']}
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <i class="fa fa-lg fa-times-circle"></i>&nbsp;{$lang['nohoster']}
     </div>
 {else}
     <div class="panel-body">
@@ -41,7 +42,6 @@
                 </thead>
                 <tbody>
                 {foreach key=key item=value from=$serverlist}
-                    {if $change_col % 2} {assign var=td_col value="green1"} {else} {assign var=td_col value="green2"} {/if}
                     <tr>
                         <td>{$value['virtualserver_id']}</td>
                         <td><a href="index.php?site=serverview&amp;sid={$value['virtualserver_id']}">{$value['virtualserver_name']}</a></td>
@@ -69,7 +69,6 @@
                             </select>
                         </td>
                     </tr>
-                    {assign var=change_col value="`$change_col+1`"}
                 {/foreach}
                 </tbody>
             </table>

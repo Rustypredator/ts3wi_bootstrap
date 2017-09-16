@@ -58,10 +58,14 @@
             <label class="label-control col-sm-2">{$lang['upload']}</label>
             <div class="col-sm-10">
                 <input type="hidden" name="max_file_size" value="8388603" />
-                <input class="form-control" name="thefile" type="file" />
+                <div class="input-group">
+                    <input class="form-control" name="thefile" type="file" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-success" type="submit" name="upload" title="{$lang['upload']}"><i class="fa fa-lg fa-upload"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-success" type="submit" name="upload" title="{$lang['upload']}"><i class="fa fa-lg fa-upload"></i></button>
     </form>
     <h2>{$lang['createfolder']}</h2>
     <form class="form-horizontal" method="post" action="index.php?site=filelist&amp;sid={$smarty.get.sid}&amp;cid={$smarty.get.cid}&amp;cpw={$smarty.get.cpw}&amp;path={$smarty.get.path}">
@@ -80,9 +84,13 @@
         <div class="form-group">
             <label class="label-control col-sm-2">{$lang['name']}</label>
             <div class="col-sm-10">
-                <input class="form-control" type="text" name="fname" value="" />
+                <div class="input-group">
+                    <input class="form-control" type="text" name="fname" value="" />
+                    <div class="input-group-btn">
+                        <button class="btn btn-success" type="submit" name="createdir" title="{$lang['create']}"><i class="fa fa-lg fa-magic"></i>&nbsp;<i class="fa fa-lg fa-folder"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-success" type="submit" name="createdir" title="{$lang['create']}"><i class="fa fa-lg fa-folder"></i></button>
     </form>
 </div>
