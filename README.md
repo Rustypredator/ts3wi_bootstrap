@@ -4,7 +4,7 @@ A Bootstrap Theme for The Ts3 Webinterface by Psychokiller.
 Link to the Forumpost: [LINK](http://interface.ts-rent.de/smf/index.php?page=Thread&threadID=1178)
   
 ## Installation:
-1. Download the .zip from the Release Page
+1. Download the .zip from the Release Page (For the most Up-To-Date version, download the repo. this may contain errors though)
 2. Unzip the file and upload the resulting folder to the ```templates``` folder.  
 3. Change ```$style="new"``` to ```$style="bootstr"``` in the file ```config.php``` ( If you renamed the folder of the theme, you'll have to use that instead of boostr. )
 4. Done!
