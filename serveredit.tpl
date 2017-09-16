@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                 <label class="label-control col-sm-2">{$lang['newpassword']}</label>
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                 <div class="input-group">
                     <input class="form-control" type="text" name="newsettings[virtualserver_password]"/>
                     <div class="input-group-btn"><button class="btn btn-success" type="submit" name="editpw" title="{$lang['set']}">{$lang['set']}</button></div>
@@ -147,7 +147,7 @@
             {if isset($permoverview['b_virtualserver_modify_icon_id']) AND empty($permoverview['b_virtualserver_modify_icon_id'])}
                 -
             {else}
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                     <div class="input-group">
                         <input class="form-control" id="iconid" type="text" name="newsettings[virtualserver_icon_id]" value="{$serverinfo['virtualserver_icon_id']}" />
                         <div class="input-group-btn">
@@ -315,7 +315,7 @@
                 {else}
                     <div class="input-group">
                         <input class="form-control" type="text" name="newsettings[virtualserver_complain_autoban_time]" value="{$serverinfo['virtualserver_complain_autoban_time']}" />
-                        <div class="input-group-btn">{$lang['seconds']}</div>
+                        <div class="input-group-addon">{$lang['seconds']}</div>
                     </div>
                 {/if}
             </div>
@@ -328,7 +328,7 @@
                 {else}
                     <div class="input-group">
                         <input class="form-control" type="text" name="newsettings[virtualserver_complain_remove_time]" value="{$serverinfo['virtualserver_complain_remove_time']}" />
-                        <div class="input-group-btn">{$lang['seconds']}</div>
+                        <div class="input-group-addon">{$lang['seconds']}</div>
                     </div>
                 {/if}
             </div>
@@ -373,7 +373,7 @@
                 {else}
                     <div class="input-group">
                         <input class="form-control" type="text" name="newsettings[virtualserver_max_upload_total_bandwidth]" value="{$serverinfo['virtualserver_max_upload_total_bandwidth']}" />
-                        <div class="input-group-btn">Byte/s</div>
+                        <div class="input-group-addon">Byte/s</div>
                     </div>
                 {/if}
             </div>
@@ -386,7 +386,7 @@
                 {else}
                     <div class="input-group">
                         <input class="form-control" type="text" name="newsettings[virtualserver_upload_quota]" value="{$serverinfo['virtualserver_upload_quota']}" />
-                        <div class="input-group-btn">MiB</div>
+                        <div class="input-group-addon">MiB</div>
                     </div>
                 {/if}
             </div>
@@ -399,7 +399,7 @@
                 {else}
                     <div class="input-group">
                         <input class="form-control" type="text" name="newsettings[virtualserver_max_download_total_bandwidth]" value="{$serverinfo['virtualserver_max_download_total_bandwidth']}" />
-                        <div class="input-group-btn">Byte/s</div>
+                        <div class="input-group-addon">Byte/s</div>
                     </div>
                 {/if}
             </div>
@@ -410,8 +410,10 @@
                 {if isset($permoverview['b_virtualserver_modify_ft_quotas']) AND empty($permoverview['b_virtualserver_modify_ft_quotas'])}
                     -
                 {else}
-                    <input class="form-control" type="text" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />
-                    <div class="input-group-btn">MiB</div>
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="newsettings[virtualserver_download_quota]" value="{$serverinfo['virtualserver_download_quota']}" />
+                        <div class="input-group-addon">MiB</div>
+                    </div>
                 {/if}
             </div>
         </div>
