@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="templates/{$tmpl}/gfx/css/font-awesome.min.css"/>
         <link rel="stylesheet" type="text/css" href="templates/{$tmpl}/gfx/css/sidebar.css"/>
         <link rel="stylesheet" type="text/css" href="templates/{$tmpl}/gfx/css/style.css" media="screen"/>
-		<!--<link rel="stylesheet" href="templates/{$tmpl}/gfx/css/tsview.css" type="text/css" media="screen" />-->
+	<link rel="stylesheet" href="templates/{$tmpl}/gfx/css/tsview.css" type="text/css" media="screen" />
 	</head>
 	<body>
         {if $site !== "login"}

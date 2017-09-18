@@ -31,8 +31,8 @@
             </form>
         </div>
     </div>
-    <table class="panel-body">
-        <td>
+    <div class="panel-body">
+        <div class="col-sm-12 col-md-6">
             <table class="table table-hover table-striped table-sm">
                 <thead>
                 <tr>
@@ -364,9 +364,8 @@
                 </tr>
                 </tbody>
             </table>
-        </td>
-        <?php } ?>
-        <td>
+        </div>
+        <div class="col-sm-12 col-md-6">
             <table>
                 <tr>
                     <td>
@@ -382,6 +381,6 @@
                     </td>
                 </tr>
             </table>
-        </td>
-    </table>
+        </div>
+    </div>
 	{/if}
